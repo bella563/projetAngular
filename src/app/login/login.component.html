@@ -1,0 +1,6 @@
+<form (ngSubmit)="login()" method="post">
+  <div class="title1">CONNEXION</div>
+  <input type="text" name="username" placeholder="Username" #usernameInput><br>
+  <input type="password" name="password" placeholder="Password" #passwordInput><br>
+  <button type="submit" (click)="login()">Login</button>
+</form>

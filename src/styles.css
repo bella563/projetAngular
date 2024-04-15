@@ -1,0 +1,174 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Style pour le formulaire */
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style pour les champs de saisie */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Style pour le bouton */
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Style pour le bouton au survol */
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+
+  /* Style pour le conteneur principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Pour espacer les boutons */
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Style pour les boutons */
+  button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style pour le bouton Médecin */
+  button[color="primary"] {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  /* Style pour le bouton Patient */
+  button[color="accent"] {
+    background-color: #ff4081;
+    color: white;
+  }
+  
+  /* Style pour le bouton Admin */
+  button[color="warn"] {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Style pour les boutons au survol */
+  button:hover {
+    opacity: 0.8;
+  }
+/* Style pour le titre */
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #007bff; /* Couleur bleue */
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  /* Animation au survol */
+  .title:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+    color: #0056b3; /* Changement de couleur au survol */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre textuelle */
+  }
+    
+  .title1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #007bff; /* Couleur bleue */
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  /* Style du conteneur du menu */
+.mat-nav-list {
+  width: 200px; /* Largeur du menu */
+  background-color: #f5f5f5; /* Couleur de fond */
+  border-right: 1px solid #ccc; /* Bordure droite */
+}
+
+/* Style des éléments de menu */
+.mat-list-item {
+  padding: 10px 20px; /* Espacement interne */
+  color: #333; /* Couleur du texte */
+  text-decoration: none; /* Supprimer la décoration de lien */
+  display: flex; /* Utiliser flexbox pour aligner les éléments */
+  align-items: center; /* Aligner verticalement les éléments */
+}
+
+.mat-list-item:hover {
+  background-color: #ddd; /* Couleur de fond au survol */
+}
+
+/* Style de l'élément actif */
+.active-link {
+  background-color: #007bff; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+}
+
+.content1 {
+  margin: 0;
+ 
+}.custom-table {
+  width: 10%; /* Diminue la largeur du tableau */
+}
+
+.custom-table th {
+  background-color: #f2f2f2; /* Couleur de fond */
+  color: #333; /* Couleur du texte */
+  font-weight: bold; /* Police en gras */
+  padding: 12px; /* Espacement intérieur */
+  text-align: left; /* Alignement du texte */
+  border-bottom: 2px solid #ddd; /* Bordure en bas */
+}
+
+/* Styles supplémentaires pour les cellules de données si nécessaire */
+.custom-table td {
+  padding: 8px; /* Espacement intérieur */
+  text-align: left; /* Alignement du texte */
+  border-bottom: 1px solid #ddd; /* Bordure en bas */
+}
+
+/* Styles pour les lignes impaires (facultatif) */
+.custom-table tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Couleur de fond pour les lignes impaires */
+}
+.button-container{
+float: right;
+margin: 10px;
+border-color: white;
+border-radius: 50px;
+}
+.content1{
+  padding: 100px;
+  padding-top: 0px; 
+  margin: 0px;
+}
+

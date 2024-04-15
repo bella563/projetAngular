@@ -1,0 +1,14 @@
+<!-- patient.component.html -->
+
+<h2>List of Patients</h2>
+<ul>
+  <li *ngFor="let patient of patients">
+    {{ patient.prenom }} {{ patient.nom }} - {{ patient.age }} years old
+    <button (click)="editPatient(patient)">Edit</button>
+    <button (click)="deletePatient(patient)">Delete</button>
+  </li>
+</ul>
+
+<button (click)="addPatient()">Add Patient</button>
+
+  <h1>tserrteserrtree</h1>

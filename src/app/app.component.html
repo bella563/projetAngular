@@ -1,0 +1,93 @@
+<!-- Ajoutez ce lien dans le <head> de votre fichier HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<ng-container *ngIf="!isDashboardRoute(); else dashboardContent">
+  <!-- Contenu par défaut -->
+  <div class="default-content">
+    <!-- Insérez ici votre contenu par défaut -->
+    <div class="container">
+      <div class="title">PatientTrack</div>
+      <button mat-raised-button color="primary" (click)="openLogin('Médecin')">Médecin</button>
+      <button mat-raised-button color="accent" (click)="openLogin('Patient')">Patient</button>
+      <button mat-raised-button color="warn" (click)="openLogin('Admin')">Admin</button>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #dashboardContent>
+  <!-- Contenu spécifique au tableau de bord -->
+  <div class="dashboard-content">
+    <!-- Insérez ici votre contenu spécifique au tableau de bord -->
+    <div class="container">
+      <div class="title">Welcome to Patient Tracking System</div>
+    </div>
+      
+    <div class="button-container">
+      <button class="btn btn-sm " mat-raised-button color="primary" (click)="openDialog()" style="margin: 10px;width: 130px;">
+          <mat-icon aria-hidden="false" aria-label="Ajouter" class="mat-icon-sm">add</mat-icon>
+          ADD
+      </button>
+  </div>
+  
+   <div class="container  content1" style="padding: 100px;padding-top: 0px; margin: 50px;">
+   
+    <mat-nav-list>
+      <a mat-list-item  routerLink="/patients" [class.active-link]="isActive('/patients')" >
+        <mat-icon>person</mat-icon>
+        <span>Patient</span>
+      </a>
+      <a mat-list-item routerLink="/consultations" routerLinkActive="active-link">
+        <mat-icon>medical_services</mat-icon>
+        <span>Consultation</span>
+      </a>
+      <a mat-list-item routerLink="/dossiers" routerLinkActive="active-link">
+        <mat-icon>folder</mat-icon>
+        <span>Dossier</span>
+      </a>
+      <a mat-list-item routerLink="/analyses" routerLinkActive="active-link">
+        <mat-icon>insert_chart_outlined</mat-icon>
+        <span>Analyse</span>
+      </a>
+      <a mat-list-item routerLink="/ordonnances" routerLinkActive="active-link">
+        <mat-icon>receipt</mat-icon>
+        <span>Ordonnance</span>
+      </a>
+    </mat-nav-list>
+    <!-- patient-list.component.html -->
+
+   
+    
+    <table mat-table [dataSource]="patients" class=" mat-elevation-z8"  style="margin-left: 30px;">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let patient">{{ patient.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="prenom">
+        <th mat-header-cell *matHeaderCellDef>Prénom</th>
+        <td mat-cell *matCellDef="let patient">{{ patient.prenom }}</td>
+      </ng-container>
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef>Nom</th>
+        <td mat-cell *matCellDef="let patient">{{ patient.nom }}</td>
+      </ng-container>
+      <ng-container matColumnDef="adresse">
+        <th mat-header-cell *matHeaderCellDef>Adresse</th>
+        <td mat-cell *matCellDef="let patient">{{ patient.adresse }}</td>
+      </ng-container>
+      <ng-container matColumnDef="numeroTelephone">
+        <th mat-header-cell *matHeaderCellDef>Numéro de téléphone</th>
+        <td mat-cell *matCellDef="let patient">{{ patient.numeroTelephone }}</td>
+      </ng-container>
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef>Âge</th>
+        <td mat-cell *matCellDef="let patient">{{ patient.age }}</td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+   </div>
+
+  </div>
+</ng-template>
